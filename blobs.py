@@ -9,6 +9,6 @@ for i in firmwareList:
 		print(Fore.GREEN + i)
 	else:
 		print(Fore.RED + i)
-print(Style.RESET_ALL)
 
+print(Style.RESET_ALL)
 print(device)

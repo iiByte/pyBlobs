@@ -20,9 +20,9 @@ class iDevice():
 			self.signed[curFirmware] = curSigned
 
 	def __str__(self):
-		
 		columns = int(os.popen('stty size', 'r').read().split()[1])
 		padding = [(columns//2)-6,(columns - columns//2)-5]
+
 		line1 = "-"*padding[0]+"Device Info"+"-"*padding[1]
 		line2 = "Name:{:>75}".format(self.JSONlist["name"])
 		line3 = "Indentifier:{:>68}".format(self.JSONlist["identifier"])
@@ -31,4 +31,5 @@ class iDevice():
 		line6 = "-"*columns
 
 		returnVal = line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n" + line5 + "\n" + line6+ "\n" 
+		
 		return returnVal
